@@ -32,17 +32,18 @@ class Main{
         for(int j = 0; j < 9; j++)
         {
             i[j] = i_n;
+            //System.out.println(i[j]);
             i_n -= 2.0;
         }
-
+        //System.out.println();
         double[] x = new double[12];
 
         // Getting massive x of 12 random nums in range [-3; 3]
         for(int j = 0; j < 12; j++){
             x[j] = (Math.random() * 6.0) - 3.0;
-            System.out.print(x[j]);
+            //System.out.println(x[j]);
         }
-        System.out.println();
+        //System.out.println();
 
         double[][] d = new double [9][12];
 
@@ -67,7 +68,8 @@ class Main{
                 double data = Math.round(d[j][k]*10000.0)/ 10000.0 ;
                 if (data < 0) System.out.print(" ");
                 else System.out.print("  ");
-                System.out.printf("%.4f ", data);
+                if (data == 0.0) System.out.printf("%-7f",Double.NaN);
+                else System.out.printf("%.4f ", data);
             }
             System.out.println();
         }
