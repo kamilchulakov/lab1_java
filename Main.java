@@ -21,10 +21,10 @@
  *
  */
 
-
 class Main{
     public static void main(String[] args){
-
+        Second.greet();
+        Third.bye();
         short[] i = new short[9];
         short i_n = 23;
 
